@@ -20,9 +20,9 @@ public class MedicoApplication extends Application {
      */
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(MedicoApplication.class.getResource("fxml/Agenda.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(MedicoApplication.class.getResource("fxml/FormularioMedico.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-        stage.setTitle("INFORMES");
+        stage.setTitle("FORMULARIO MÉDICO");
         stage.setScene(scene);
         stage.show();
     }
