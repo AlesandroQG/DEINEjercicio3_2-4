@@ -59,7 +59,7 @@ public class MedicoController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         parameters = new HashMap<String, Object>();
-        tratamiento.setText("Tomar xxx cada 8 días durante 3 semanas\nTomar yyy cada 8 días durante 3 semanas\nTomar zzz cada 8 días durante 3 semanas");
+        // tratamiento.setText("Tomar xxx cada 8 días durante 3 semanas\nTomar yyy cada 8 días durante 3 semanas\nTomar zzz cada 8 días durante 3 semanas");
     }
 
     /**

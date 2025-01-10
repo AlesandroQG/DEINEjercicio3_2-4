@@ -1,0 +1,65 @@
+<!-- Created with Jaspersoft Studio version 7.0.1.final using JasperReports Library version 7.0.1-573496633c2b4074e32f433154b543003f7d2498  -->
+<jasperReport name="InformeMedico" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="cc87056a-cb05-47b6-bb6b-a2bfcf199bfa">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="numPaciente" forPrompting="false" class="java.lang.String"/>
+	<parameter name="nombrePaciente" forPrompting="false" class="java.lang.String"/>
+	<parameter name="direccionPaciente" forPrompting="false" class="java.lang.String"/>
+	<parameter name="codMedico" forPrompting="false" class="java.lang.String"/>
+	<parameter name="nombreMedico" forPrompting="false" class="java.lang.String"/>
+	<parameter name="especialidadMedico" forPrompting="false" class="java.lang.String"/>
+	<parameter name="tratamiento" forPrompting="false" class="java.lang.String"/>
+	<query language="sql"><![CDATA[]]></query>
+	<background splitType="Stretch"/>
+	<title height="106" splitType="Stretch">
+		<element kind="textField" uuid="fb261b01-4657-4f52-bdea-e8b330bcf620" x="180" y="0" width="376" height="50" forecolor="#033496" fontSize="25.0" hTextAlign="Right" vTextAlign="Middle">
+			<expression><![CDATA[$P{nombreMedico}]]></expression>
+		</element>
+		<element kind="textField" uuid="86b84b44-fd93-4bb4-bda9-c6445bbc8900" x="180" y="50" width="376" height="30" forecolor="#6E6E6E" fontSize="15.0" hTextAlign="Right" vTextAlign="Middle">
+			<expression><![CDATA[$P{especialidadMedico}]]></expression>
+		</element>
+		<element kind="textField" uuid="74ad39da-ca33-4aed-b0b4-1f4e0b02cae0" x="180" y="80" width="376" height="26" forecolor="#B0B0B0" fontSize="15.0" hTextAlign="Right" vTextAlign="Middle">
+			<expression><![CDATA["Nº Colegiado " + $P{codMedico}]]></expression>
+		</element>
+		<element kind="image" uuid="982cdd10-a7b3-4fc0-b637-41a27f36eb1a" x="0" y="0" width="101" height="100">
+			<expression><![CDATA["src/main/resources/com/alesandro/ejercicio3_24/images/logo-medico.png"]]></expression>
+		</element>
+	</title>
+	<detail>
+		<band height="318" splitType="Stretch">
+			<element kind="rectangle" uuid="55072eaa-c2ba-4ddc-9da4-3277a060aab3" x="0" y="10" width="556" height="100" radius="15"/>
+			<element kind="textField" uuid="5aaa35cc-3ab5-4e85-aaf9-c98eca719866" x="110" y="20" width="420" height="20" hTextAlign="Left" vTextAlign="Middle">
+				<expression><![CDATA[$P{nombrePaciente}]]></expression>
+			</element>
+			<element kind="staticText" uuid="34bb5a68-3a23-4192-8ce6-a4249491faa2" x="10" y="20" width="91" height="20" fontSize="11.0" vTextAlign="Middle">
+				<text><![CDATA[Nombre:]]></text>
+			</element>
+			<element kind="staticText" uuid="0cafcb83-0c0a-4633-a9b6-545a30f50829" x="10" y="50" width="91" height="20" fontSize="11.0" vTextAlign="Middle">
+				<text><![CDATA[Dirección:]]></text>
+			</element>
+			<element kind="staticText" uuid="9e368eb4-63d8-4e76-88c7-01e4ee9d65ab" x="10" y="80" width="91" height="20" fontSize="11.0" vTextAlign="Middle">
+				<text><![CDATA[Nº Documento:]]></text>
+			</element>
+			<element kind="textField" uuid="9a88e624-a0a9-4960-9886-410a6753a7f2" x="110" y="50" width="420" height="20" hTextAlign="Left" vTextAlign="Middle">
+				<expression><![CDATA[$P{direccionPaciente}]]></expression>
+			</element>
+			<element kind="textField" uuid="66ad6bfe-5a05-47de-9495-83c6e227f94f" x="110" y="80" width="420" height="20" hTextAlign="Left" vTextAlign="Middle">
+				<expression><![CDATA[$P{numPaciente}]]></expression>
+			</element>
+			<element kind="line" uuid="7bbbf9f7-9a64-4b3c-ba10-f1388e2d2429" x="110" y="40" width="420" height="1" forecolor="#8C8C8C"/>
+			<element kind="line" uuid="b837b790-4345-43a3-9843-2d12f871d83e" x="110" y="70" width="420" height="1" forecolor="#8C8C8C"/>
+			<element kind="line" uuid="1dbd2bb6-a63b-4728-99df-bb415173375f" x="110" y="100" width="420" height="1" forecolor="#8C8C8C"/>
+			<element kind="staticText" uuid="6e0e4737-5cd9-40b5-9fb3-5c3d906ab6d7" mode="Opaque" x="0" y="120" width="556" height="20" forecolor="#FFFFFF" backcolor="#059BFF" fontSize="11.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+				<text><![CDATA[TRATAMIENTO]]></text>
+			</element>
+			<element kind="textField" uuid="96aadf20-c2de-4d5b-83de-2dfdc71d6061" x="0" y="150" width="556" height="160">
+				<expression><![CDATA[$P{tratamiento}]]></expression>
+			</element>
+		</band>
+	</detail>
+	<pageFooter height="56" splitType="Stretch">
+		<element kind="staticText" uuid="3b700c95-d205-4304-b9e6-e7f05e13f292" x="0" y="20" width="60" height="20" fontSize="16.0" vTextAlign="Middle">
+			<text><![CDATA[Firma:]]></text>
+		</element>
+		<element kind="line" uuid="260dc059-3c8d-4952-987c-bd8ddc60a875" x="70" y="40" width="486" height="1"/>
+	</pageFooter>
+</jasperReport>
